@@ -131,4 +131,11 @@ proc main() {
     timer.stop();
     if bitonic_verbose then writeln(A);
     writeln();
+
+    if bitonic_verbose then {
+        write("Is the sorting correct: ");
+        if check_bitonic(A, size) then writeln("Yes");
+        else writeln("No");
+        writeln();
+    }
 }
