@@ -11,14 +11,13 @@ Customize the output by running
 Example
 > ./bitonic --bitonic_verbose=true --size=8 --num_range=2
 
+
 Begin to sort a random array of size 8
 Time used to generate random numbers: 0.000504
 1 0 1 0 1 1 0 1
 
 Time used to do bitonic sort: 0.000936
 0 0 0 1 1 1 1 1
-
-Is the sorting correct: Yes
 
 */
 use BitOps;
@@ -132,10 +131,4 @@ proc main() {
     if bitonic_verbose then writeln(A);
     writeln();
 
-    if bitonic_verbose then {
-        write("Is the sorting correct: ");
-        if check_bitonic(A, size) then writeln("Yes");
-        else writeln("No");
-        writeln();
-    }
 }
